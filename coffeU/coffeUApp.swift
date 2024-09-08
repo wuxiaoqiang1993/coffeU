@@ -5,7 +5,7 @@ import SwiftUI
 struct coffeUApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            HomePage()
         }
     }
 }
