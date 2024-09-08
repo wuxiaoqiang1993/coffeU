@@ -9,14 +9,32 @@ struct MainView: View {
     @State private var inputImages: [UIImage] = []
     @State private var showingProfile = false
     @ObservedObject var profileViewModel: ProfileViewModel
+    @State private var searchText = ""
+    
+    var filteredPosts: [Post] {
+        if searchText.isEmpty {
+            return posts
+        } else {
+            return posts.filter { $0.content.lowercased().contains(searchText.lowercased()) }
+        }
+    }
     
     var body: some View {
         NavigationView {
             VStack {
+                TextField("Search posts", text: $searchText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
                 List {
-                    ForEach(posts) { post in
+                    ForEach(filteredPosts) { post in
                         VStack(alignment: .leading) {
-                            NavigationLink(destination: PostDetailView(post: binding(for: post))) {
+                            NavigationLink(destination: PostDetailView(post: binding(for: post), onSave: { updatedPost in
+                                if let index = posts.firstIndex(where: { $0.id == updatedPost.id }) {
+                                    posts[index] = updatedPost
+                                    savePosts()
+                                }
+                            })) {
                                 VStack(alignment: .leading) {
                                     Text(post.content)
                                     Text(formatDate(post.date))
@@ -27,6 +45,8 @@ struct MainView: View {
                                     }
                                 }
                             }
+                            .buttonStyle(PlainButtonStyle()) // This ensures the NavigationLink doesn't affect the share button
+                            
                             HStack {
                                 Spacer()
                                 Button(action: {
@@ -145,6 +165,7 @@ struct MainView: View {
         if let encodedPosts = try? JSONEncoder().encode(posts) {
             UserDefaults.standard.set(encodedPosts, forKey: "posts")
         }
+        profileViewModel.updatePostCount(posts.count)
     }
 
     private func saveImage(_ image: UIImage) -> String? {
