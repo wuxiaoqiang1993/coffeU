@@ -1,0 +1,702 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC35FE692C8AA2B700C5D398 /* coffeUApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35FE682C8AA2B700C5D398 /* coffeUApp.swift */; };
+		FC35FE6B2C8AA2B700C5D398 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35FE6A2C8AA2B700C5D398 /* ContentView.swift */; };
+		FC35FE6D2C8AA2BA00C5D398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC35FE6C2C8AA2BA00C5D398 /* Assets.xcassets */; };
+		FC35FE702C8AA2BA00C5D398 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC35FE6F2C8AA2BA00C5D398 /* Preview Assets.xcassets */; };
+		FC35FE7A2C8AA2BA00C5D398 /* coffeUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35FE792C8AA2BA00C5D398 /* coffeUTests.swift */; };
+		FC35FE842C8AA2BA00C5D398 /* coffeUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35FE832C8AA2BA00C5D398 /* coffeUUITests.swift */; };
+		FC35FE862C8AA2BA00C5D398 /* coffeUUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35FE852C8AA2BA00C5D398 /* coffeUUITestsLaunchTests.swift */; };
+		FC3CC0FF2C8AB48100F04630 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC3CC0FE2C8AB48100F04630 /* GoogleService-Info.plist */; };
+		FC3CC1012C8AB98E00F04630 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CC1002C8AB98E00F04630 /* AuthView.swift */; };
+		FC3CC1032C8AB9AF00F04630 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CC1022C8AB9AF00F04630 /* MainView.swift */; };
+		FC86741E2C8D7D300054F67A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86741D2C8D7D300054F67A /* ImagePicker.swift */; };
+		FC8674202C8D7EF10054F67A /* ImageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86741F2C8D7EF10054F67A /* ImageCarousel.swift */; };
+		FC8674222C8D810C0054F67A /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8674212C8D810C0054F67A /* PostDetailView.swift */; };
+		FC8674242C8D85120054F67A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8674232C8D85120054F67A /* ProfileView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC35FE762C8AA2BA00C5D398 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC35FE5D2C8AA2B700C5D398 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC35FE642C8AA2B700C5D398;
+			remoteInfo = coffeU;
+		};
+		FC35FE802C8AA2BA00C5D398 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC35FE5D2C8AA2B700C5D398 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC35FE642C8AA2B700C5D398;
+			remoteInfo = coffeU;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC35B5A42C8AD7CD00E51B0F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FC35FE652C8AA2B700C5D398 /* coffeU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coffeU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC35FE682C8AA2B700C5D398 /* coffeUApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coffeUApp.swift; sourceTree = "<group>"; };
+		FC35FE6A2C8AA2B700C5D398 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FC35FE6C2C8AA2BA00C5D398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC35FE6F2C8AA2BA00C5D398 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC35FE752C8AA2BA00C5D398 /* coffeUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coffeUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC35FE792C8AA2BA00C5D398 /* coffeUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coffeUTests.swift; sourceTree = "<group>"; };
+		FC35FE7F2C8AA2BA00C5D398 /* coffeUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coffeUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC35FE832C8AA2BA00C5D398 /* coffeUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coffeUUITests.swift; sourceTree = "<group>"; };
+		FC35FE852C8AA2BA00C5D398 /* coffeUUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coffeUUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC3CC0FE2C8AB48100F04630 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC3CC1002C8AB98E00F04630 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		FC3CC1022C8AB9AF00F04630 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FC86741D2C8D7D300054F67A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		FC86741F2C8D7EF10054F67A /* ImageCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarousel.swift; sourceTree = "<group>"; };
+		FC8674212C8D810C0054F67A /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		FC8674232C8D85120054F67A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC35FE622C8AA2B700C5D398 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC35FE722C8AA2BA00C5D398 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC35FE7C2C8AA2BA00C5D398 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A96E3A9F19BBA24FDED6B084 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC35FE5C2C8AA2B700C5D398 = {
+			isa = PBXGroup;
+			children = (
+				FC35FE672C8AA2B700C5D398 /* coffeU */,
+				FC35FE782C8AA2BA00C5D398 /* coffeUTests */,
+				FC35FE822C8AA2BA00C5D398 /* coffeUUITests */,
+				FC35FE662C8AA2B700C5D398 /* Products */,
+				A96E3A9F19BBA24FDED6B084 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		FC35FE662C8AA2B700C5D398 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC35FE652C8AA2B700C5D398 /* coffeU.app */,
+				FC35FE752C8AA2BA00C5D398 /* coffeUTests.xctest */,
+				FC35FE7F2C8AA2BA00C5D398 /* coffeUUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC35FE672C8AA2B700C5D398 /* coffeU */ = {
+			isa = PBXGroup;
+			children = (
+				FC3CC0FE2C8AB48100F04630 /* GoogleService-Info.plist */,
+				FC35FE682C8AA2B700C5D398 /* coffeUApp.swift */,
+				FC3CC1002C8AB98E00F04630 /* AuthView.swift */,
+				FC86741D2C8D7D300054F67A /* ImagePicker.swift */,
+				FC3CC1022C8AB9AF00F04630 /* MainView.swift */,
+				FC8674232C8D85120054F67A /* ProfileView.swift */,
+				FC8674212C8D810C0054F67A /* PostDetailView.swift */,
+				FC86741F2C8D7EF10054F67A /* ImageCarousel.swift */,
+				FC35FE6A2C8AA2B700C5D398 /* ContentView.swift */,
+				FC35FE6C2C8AA2BA00C5D398 /* Assets.xcassets */,
+				FC35FE6E2C8AA2BA00C5D398 /* Preview Content */,
+			);
+			path = coffeU;
+			sourceTree = "<group>";
+		};
+		FC35FE6E2C8AA2BA00C5D398 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FC35FE6F2C8AA2BA00C5D398 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC35FE782C8AA2BA00C5D398 /* coffeUTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC35FE792C8AA2BA00C5D398 /* coffeUTests.swift */,
+			);
+			path = coffeUTests;
+			sourceTree = "<group>";
+		};
+		FC35FE822C8AA2BA00C5D398 /* coffeUUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC35FE832C8AA2BA00C5D398 /* coffeUUITests.swift */,
+				FC35FE852C8AA2BA00C5D398 /* coffeUUITestsLaunchTests.swift */,
+			);
+			path = coffeUUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC35FE642C8AA2B700C5D398 /* coffeU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC35FE892C8AA2BA00C5D398 /* Build configuration list for PBXNativeTarget "coffeU" */;
+			buildPhases = (
+				FC35FE612C8AA2B700C5D398 /* Sources */,
+				FC35FE622C8AA2B700C5D398 /* Frameworks */,
+				FC35FE632C8AA2B700C5D398 /* Resources */,
+				FC35B5A42C8AD7CD00E51B0F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = coffeU;
+			productName = coffeU;
+			productReference = FC35FE652C8AA2B700C5D398 /* coffeU.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC35FE742C8AA2BA00C5D398 /* coffeUTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC35FE8C2C8AA2BA00C5D398 /* Build configuration list for PBXNativeTarget "coffeUTests" */;
+			buildPhases = (
+				FC35FE712C8AA2BA00C5D398 /* Sources */,
+				FC35FE722C8AA2BA00C5D398 /* Frameworks */,
+				FC35FE732C8AA2BA00C5D398 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC35FE772C8AA2BA00C5D398 /* PBXTargetDependency */,
+			);
+			name = coffeUTests;
+			productName = coffeUTests;
+			productReference = FC35FE752C8AA2BA00C5D398 /* coffeUTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC35FE7E2C8AA2BA00C5D398 /* coffeUUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC35FE8F2C8AA2BA00C5D398 /* Build configuration list for PBXNativeTarget "coffeUUITests" */;
+			buildPhases = (
+				FC35FE7B2C8AA2BA00C5D398 /* Sources */,
+				FC35FE7C2C8AA2BA00C5D398 /* Frameworks */,
+				FC35FE7D2C8AA2BA00C5D398 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC35FE812C8AA2BA00C5D398 /* PBXTargetDependency */,
+			);
+			name = coffeUUITests;
+			productName = coffeUUITests;
+			productReference = FC35FE7F2C8AA2BA00C5D398 /* coffeUUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC35FE5D2C8AA2B700C5D398 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					FC35FE642C8AA2B700C5D398 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					FC35FE742C8AA2BA00C5D398 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = FC35FE642C8AA2B700C5D398;
+					};
+					FC35FE7E2C8AA2BA00C5D398 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = FC35FE642C8AA2B700C5D398;
+					};
+				};
+			};
+			buildConfigurationList = FC35FE602C8AA2B700C5D398 /* Build configuration list for PBXProject "coffeU" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC35FE5C2C8AA2B700C5D398;
+			productRefGroup = FC35FE662C8AA2B700C5D398 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC35FE642C8AA2B700C5D398 /* coffeU */,
+				FC35FE742C8AA2BA00C5D398 /* coffeUTests */,
+				FC35FE7E2C8AA2BA00C5D398 /* coffeUUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC35FE632C8AA2B700C5D398 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC35FE702C8AA2BA00C5D398 /* Preview Assets.xcassets in Resources */,
+				FC35FE6D2C8AA2BA00C5D398 /* Assets.xcassets in Resources */,
+				FC3CC0FF2C8AB48100F04630 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC35FE732C8AA2BA00C5D398 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC35FE7D2C8AA2BA00C5D398 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC35FE612C8AA2B700C5D398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8674242C8D85120054F67A /* ProfileView.swift in Sources */,
+				FC35FE6B2C8AA2B700C5D398 /* ContentView.swift in Sources */,
+				FC3CC1032C8AB9AF00F04630 /* MainView.swift in Sources */,
+				FC86741E2C8D7D300054F67A /* ImagePicker.swift in Sources */,
+				FC8674202C8D7EF10054F67A /* ImageCarousel.swift in Sources */,
+				FC8674222C8D810C0054F67A /* PostDetailView.swift in Sources */,
+				FC35FE692C8AA2B700C5D398 /* coffeUApp.swift in Sources */,
+				FC3CC1012C8AB98E00F04630 /* AuthView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC35FE712C8AA2BA00C5D398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC35FE7A2C8AA2BA00C5D398 /* coffeUTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC35FE7B2C8AA2BA00C5D398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC35FE862C8AA2BA00C5D398 /* coffeUUITestsLaunchTests.swift in Sources */,
+				FC35FE842C8AA2BA00C5D398 /* coffeUUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC35FE772C8AA2BA00C5D398 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC35FE642C8AA2B700C5D398 /* coffeU */;
+			targetProxy = FC35FE762C8AA2BA00C5D398 /* PBXContainerItemProxy */;
+		};
+		FC35FE812C8AA2BA00C5D398 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC35FE642C8AA2B700C5D398 /* coffeU */;
+			targetProxy = FC35FE802C8AA2BA00C5D398 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FC35FE872C8AA2BA00C5D398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC35FE882C8AA2BA00C5D398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC35FE8A2C8AA2BA00C5D398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"coffeU/Preview Content\"";
+				DEVELOPMENT_TEAM = 495QKSYYNW;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BoringSSL-GRPC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAppCheckInterop\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuthInterop\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreExtension\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestoreInternal\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseSharedSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RecaptchaInterop\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/abseil\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-Core\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FirebaseAnalytics/AdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement/AdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement/WithoutAdIdSupport\"",
+					"${PODS_ROOT}",
+					"${PODS_XCFRAMEWORKS_BUILD_DIR}",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Timtech.coffeU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC35FE8B2C8AA2BA00C5D398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"coffeU/Preview Content\"";
+				DEVELOPMENT_TEAM = 495QKSYYNW;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BoringSSL-GRPC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAppCheckInterop\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuthInterop\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreExtension\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestoreInternal\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseSharedSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RecaptchaInterop\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/abseil\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-Core\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FirebaseAnalytics/AdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement/AdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement/WithoutAdIdSupport\"",
+					"${PODS_ROOT}",
+					"${PODS_XCFRAMEWORKS_BUILD_DIR}",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Timtech.coffeU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC35FE8D2C8AA2BA00C5D398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 495QKSYYNW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Timtech.coffeUTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/coffeU.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/coffeU";
+			};
+			name = Debug;
+		};
+		FC35FE8E2C8AA2BA00C5D398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 495QKSYYNW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Timtech.coffeUTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/coffeU.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/coffeU";
+			};
+			name = Release;
+		};
+		FC35FE902C8AA2BA00C5D398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 495QKSYYNW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Timtech.coffeUUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = coffeU;
+			};
+			name = Debug;
+		};
+		FC35FE912C8AA2BA00C5D398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 495QKSYYNW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Timtech.coffeUUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = coffeU;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC35FE602C8AA2B700C5D398 /* Build configuration list for PBXProject "coffeU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC35FE872C8AA2BA00C5D398 /* Debug */,
+				FC35FE882C8AA2BA00C5D398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC35FE892C8AA2BA00C5D398 /* Build configuration list for PBXNativeTarget "coffeU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC35FE8A2C8AA2BA00C5D398 /* Debug */,
+				FC35FE8B2C8AA2BA00C5D398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC35FE8C2C8AA2BA00C5D398 /* Build configuration list for PBXNativeTarget "coffeUTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC35FE8D2C8AA2BA00C5D398 /* Debug */,
+				FC35FE8E2C8AA2BA00C5D398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC35FE8F2C8AA2BA00C5D398 /* Build configuration list for PBXNativeTarget "coffeUUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC35FE902C8AA2BA00C5D398 /* Debug */,
+				FC35FE912C8AA2BA00C5D398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC35FE5D2C8AA2B700C5D398 /* Project object */;
+}
