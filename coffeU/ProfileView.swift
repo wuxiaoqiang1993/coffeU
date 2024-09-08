@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    let joinDate: Date
-    let membershipStatus: String
-    let postCount: Int
+    @ObservedObject var viewModel: ProfileViewModel
     
     var body: some View {
         List {
@@ -23,7 +21,7 @@ struct ProfileView: View {
                     VStack(alignment: .leading) {
                         Text("User Name")
                             .font(.headline)
-                        Text(membershipStatus)
+                        Text(viewModel.membershipStatus)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
@@ -33,14 +31,14 @@ struct ProfileView: View {
                 HStack {
                     Text("Joined")
                     Spacer()
-                    Text(formatDate(joinDate))
+                    Text(formatDate(viewModel.joinDate))
                         .foregroundColor(.secondary)
                 }
                 
                 HStack {
                     Text("Posts")
                     Spacer()
-                    Text("\(postCount)")
+                    Text("\(viewModel.postCount)")
                         .foregroundColor(.secondary)
                 }
             }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomePage: View {
     @State private var showingProfile = false
+    @StateObject private var profileViewModel = ProfileViewModel()
     
     var body: some View {
         NavigationView {
@@ -32,12 +33,16 @@ struct HomePage: View {
                         HomePageButton(title: "Recommended Posts", systemImage: "star.fill")
                     }
                     
-                    NavigationLink(destination: MainView()) {
-                        HomePageButton(title: "Coffee Posts", systemImage: "cup.and.saucer.fill")
+                    NavigationLink(destination: MainView(profileViewModel: profileViewModel)) {
+                        HomePageButton(title: "My Coffee Posts", systemImage: "cup.and.saucer.fill")
                     }
                     
                     NavigationLink(destination: ShopView()) {
                         HomePageButton(title: "Shop", systemImage: "cart.fill")
+                    }
+                    
+                    NavigationLink(destination: BrewingKitsView()) {
+                        HomePageButton(title: "My Brewing Kits", systemImage: "list.bullet")
                     }
                     
                     Spacer()
@@ -53,11 +58,7 @@ struct HomePage: View {
         }
         .sheet(isPresented: $showingProfile) {
             NavigationView {
-                ProfileView(
-                    joinDate: Date().addingTimeInterval(-30 * 24 * 60 * 60),
-                    membershipStatus: "Premium Member",
-                    postCount: 0
-                )
+                ProfileView(viewModel: profileViewModel)
             }
         }
     }
