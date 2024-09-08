@@ -1,6 +1,7 @@
 import SwiftUI
 import UIKit
 import Foundation
+import CoreLocation
 
 struct MainView: View {
     @State private var posts: [Post] = []
@@ -10,6 +11,7 @@ struct MainView: View {
     @State private var showingProfile = false
     @ObservedObject var profileViewModel: ProfileViewModel
     @State private var searchText = ""
+    @StateObject private var locationManager = LocationManager()
     
     var filteredPosts: [Post] {
         if searchText.isEmpty {
@@ -138,7 +140,7 @@ struct MainView: View {
     private func createPost() {
         if !newPostContent.isEmpty {
             let imageNames = inputImages.compactMap { saveImage($0) }
-            let newPost = Post(content: newPostContent, date: Date(), imageNames: imageNames)
+            let newPost = Post(content: newPostContent, date: Date(), imageNames: imageNames, location: locationManager.lastKnownLocation)
             posts.insert(newPost, at: 0)
             savePosts()
             newPostContent = ""
@@ -185,5 +187,22 @@ struct MainView: View {
 
     private func getDocumentsDirectory() -> URL {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+}
+
+class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+    private let locationManager = CLLocationManager()
+    @Published var lastKnownLocation: CLLocationCoordinate2D?
+
+    override init() {
+        super.init()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        lastKnownLocation = locations.first?.coordinate
     }
 }
