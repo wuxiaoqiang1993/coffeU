@@ -21,6 +21,8 @@
 		FC8674202C8D7EF10054F67A /* ImageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86741F2C8D7EF10054F67A /* ImageCarousel.swift */; };
 		FC8674222C8D810C0054F67A /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8674212C8D810C0054F67A /* PostDetailView.swift */; };
 		FC8674242C8D85120054F67A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8674232C8D85120054F67A /* ProfileView.swift */; };
+		FC8674262C8D88120054F67A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8674252C8D88120054F67A /* Post.swift */; };
+		FC8674282C8D8E150054F67A /* testgarbage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8674272C8D8E150054F67A /* testgarbage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		FC86741F2C8D7EF10054F67A /* ImageCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarousel.swift; sourceTree = "<group>"; };
 		FC8674212C8D810C0054F67A /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		FC8674232C8D85120054F67A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FC8674252C8D88120054F67A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FC8674272C8D8E150054F67A /* testgarbage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testgarbage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 				FC3CC1022C8AB9AF00F04630 /* MainView.swift */,
 				FC8674232C8D85120054F67A /* ProfileView.swift */,
 				FC8674212C8D810C0054F67A /* PostDetailView.swift */,
+				FC8674252C8D88120054F67A /* Post.swift */,
+				FC8674272C8D8E150054F67A /* testgarbage.swift */,
 				FC86741F2C8D7EF10054F67A /* ImageCarousel.swift */,
 				FC35FE6A2C8AA2B700C5D398 /* ContentView.swift */,
 				FC35FE6C2C8AA2BA00C5D398 /* Assets.xcassets */,
@@ -301,11 +307,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8674242C8D85120054F67A /* ProfileView.swift in Sources */,
+				FC8674282C8D8E150054F67A /* testgarbage.swift in Sources */,
 				FC35FE6B2C8AA2B700C5D398 /* ContentView.swift in Sources */,
 				FC3CC1032C8AB9AF00F04630 /* MainView.swift in Sources */,
 				FC86741E2C8D7D300054F67A /* ImagePicker.swift in Sources */,
 				FC8674202C8D7EF10054F67A /* ImageCarousel.swift in Sources */,
 				FC8674222C8D810C0054F67A /* PostDetailView.swift in Sources */,
+				FC8674262C8D88120054F67A /* Post.swift in Sources */,
 				FC35FE692C8AA2B700C5D398 /* coffeUApp.swift in Sources */,
 				FC3CC1012C8AB98E00F04630 /* AuthView.swift in Sources */,
 			);

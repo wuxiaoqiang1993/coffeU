@@ -12,6 +12,7 @@ struct PostDetailView: View {
     @State private var isEditing = false
     @State private var editedContent: String = ""
     @State private var showingImagePicker = false
+    @State private var inputImages: [UIImage] = []
     
     var body: some View {
         ScrollView {
@@ -26,24 +27,14 @@ struct PostDetailView: View {
                     .font(.caption)
                     .foregroundColor(.gray)
                 
-                ForEach(post.images.indices, id: \.self) { index in
-                    Image(uiImage: post.images[index])
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 200)
-                        .cornerRadius(8)
-                        .overlay(
-                            Button(action: {
-                                post.images.remove(at: index)
-                            }) {
-                                Image(systemName: "xmark.circle.fill")
-                                    .foregroundColor(.white)
-                                    .background(Color.black.opacity(0.7))
-                                    .clipShape(Circle())
-                            }
-                            .padding(8),
-                            alignment: .topTrailing
-                        )
+                ForEach(post.imageNames, id: \.self) { imageName in
+                    if let image = loadImage(named: imageName) {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 200)
+                            .cornerRadius(8)
+                    }
                 }
                 
                 Button(action: {
@@ -64,8 +55,8 @@ struct PostDetailView: View {
                 }
             }
         }
-        .sheet(isPresented: $showingImagePicker) {
-            ImagePicker(images: $post.images)
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImages) {
+            ImagePicker(images: $inputImages)
         }
     }
     
@@ -74,5 +65,29 @@ struct PostDetailView: View {
         formatter.dateStyle = .short
         formatter.timeStyle = .short
         return formatter.string(from: date)
+    }
+    
+    func loadImages() {
+        for image in inputImages {
+            if let imageName = saveImage(image) {
+                post.imageNames.append(imageName)
+            }
+        }
+        inputImages = []
+    }
+    
+    func loadImage(named filename: String) -> UIImage? {
+        let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(filename)
+        return UIImage(contentsOfFile: fileURL.path)
+    }
+    
+    func saveImage(_ image: UIImage) -> String? {
+        if let data = image.jpegData(compressionQuality: 0.8) {
+            let filename = UUID().uuidString + ".jpg"
+            let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(filename)
+            try? data.write(to: fileURL)
+            return filename
+        }
+        return nil
     }
 }

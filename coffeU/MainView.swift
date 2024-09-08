@@ -8,15 +8,12 @@
 // MainView.swift
 import SwiftUI
 import UIKit
-struct Post: Identifiable {
-    let id = UUID()
-    var content: String
-    let date: Date
-    var images: [UIImage]
-}
+
+import Foundation
 
 
-
+import SwiftUI
+import UIKit
 
 struct MainView: View {
     @State private var posts: [Post] = []
@@ -37,8 +34,8 @@ struct MainView: View {
                                     Text(formatDate(post.date))
                                         .font(.caption)
                                         .foregroundColor(.gray)
-                                    if !post.images.isEmpty {
-                                        ImagePreviewRow(images: post.images)
+                                    if !post.imageNames.isEmpty {
+                                        ImagePreviewRow(imageNames: post.imageNames)
                                     }
                                 }
                             }
@@ -65,7 +62,10 @@ struct MainView: View {
                     }
                     Button("Post") {
                         if !newPostContent.isEmpty {
-                            posts.insert(Post(content: newPostContent, date: Date(), images: inputImages), at: 0)
+                            let imageNames = inputImages.compactMap { saveImage($0) }
+                            let newPost = Post(content: newPostContent, date: Date(), imageNames: imageNames)
+                            posts.insert(newPost, at: 0)
+                            savePosts()
                             newPostContent = ""
                             inputImages = []
                             print("Post created")
@@ -100,10 +100,12 @@ struct MainView: View {
                 )
             }
         }
+        .onAppear(perform: loadPosts)
     }
 
     func deletePosts(at offsets: IndexSet) {
         posts.remove(atOffsets: offsets)
+        savePosts()
     }
 
     func formatDate(_ date: Date) -> String {
@@ -128,8 +130,8 @@ struct MainView: View {
         let textToShare = post.content
         var itemsToShare: [Any] = [textToShare]
         
-        if let firstImage = post.images.first {
-            itemsToShare.append(firstImage)
+        if let firstImageName = post.imageNames.first, let image = loadImage(named: firstImageName) {
+            itemsToShare.append(image)
         }
         
         let activityViewController = UIActivityViewController(activityItems: itemsToShare, applicationActivities: nil)
@@ -140,29 +142,75 @@ struct MainView: View {
             rootViewController.present(activityViewController, animated: true, completion: nil)
         }
     }
+    
+    func savePosts() {
+        do {
+            let data = try JSONEncoder().encode(posts)
+            try data.write(to: getDocumentsDirectory().appendingPathComponent("posts.json"))
+        } catch {
+            print("Failed to save posts: \(error.localizedDescription)")
+        }
+    }
+
+    func loadPosts() {
+        let fileURL = getDocumentsDirectory().appendingPathComponent("posts.json")
+        if let data = try? Data(contentsOf: fileURL) {
+            do {
+                posts = try JSONDecoder().decode([Post].self, from: data)
+            } catch {
+                print("Failed to load posts: \(error.localizedDescription)")
+            }
+        }
+    }
+
+    func getDocumentsDirectory() -> URL {
+        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+
+    func saveImage(_ image: UIImage) -> String? {
+        if let data = image.jpegData(compressionQuality: 0.8) {
+            let filename = UUID().uuidString + ".jpg"
+            let fileURL = getDocumentsDirectory().appendingPathComponent(filename)
+            try? data.write(to: fileURL)
+            return filename
+        }
+        return nil
+    }
+
+    func loadImage(named filename: String) -> UIImage? {
+        let fileURL = getDocumentsDirectory().appendingPathComponent(filename)
+        return UIImage(contentsOfFile: fileURL.path)
+    }
 }
 
 struct ImagePreviewRow: View {
-    let images: [UIImage]
+    let imageNames: [String]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(images.prefix(3), id: \.self) { image in
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 80, height: 80)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                ForEach(imageNames.prefix(3), id: \.self) { imageName in
+                    if let image = loadImage(named: imageName) {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 80, height: 80)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
                 }
-                if images.count > 3 {
-                    Text("+\(images.count - 3)")
+                if imageNames.count > 3 {
+                    Text("+\(imageNames.count - 3)")
                         .frame(width: 80, height: 80)
                         .background(Color.gray.opacity(0.3))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
             }
         }
+    }
+    
+    func loadImage(named filename: String) -> UIImage? {
+        let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(filename)
+        return UIImage(contentsOfFile: fileURL.path)
     }
 }
 // ... (keep the ImagePreviewRow struct)
