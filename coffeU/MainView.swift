@@ -5,15 +5,9 @@
 //  Created by Xiaoqiang Wu on 9/5/24.
 //
 
-// MainView.swift
 import SwiftUI
 import UIKit
-
 import Foundation
-
-
-import SwiftUI
-import UIKit
 
 struct MainView: View {
     @State private var posts: [Post] = []
@@ -77,11 +71,7 @@ struct MainView: View {
             .navigationTitle("Coffee Posts")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        showingProfile = true
-                    }) {
-                        Image(systemName: "person.crop.circle")
-                    }
+                    ProfileIcon(action: { showingProfile = true })
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
@@ -103,6 +93,16 @@ struct MainView: View {
         .onAppear(perform: loadPosts)
     }
 
+    // Add this function to create a binding for a post
+    private func binding(for post: Post) -> Binding<Post> {
+        guard let index = posts.firstIndex(where: { $0.id == post.id }) else {
+            fatalError("Post not found")
+        }
+        return $posts[index]
+    }
+
+    // ... (keep all other existing functions)
+
     func deletePosts(at offsets: IndexSet) {
         posts.remove(atOffsets: offsets)
         savePosts()
@@ -117,13 +117,6 @@ struct MainView: View {
     
     func loadImages() {
         // You can add additional processing here if needed
-    }
-    
-    private func binding(for post: Post) -> Binding<Post> {
-        guard let index = posts.firstIndex(where: { $0.id == post.id }) else {
-            fatalError("Post not found")
-        }
-        return $posts[index]
     }
     
     func sharePost(_ post: Post) {
@@ -213,7 +206,7 @@ struct ImagePreviewRow: View {
         return UIImage(contentsOfFile: fileURL.path)
     }
 }
-// ... (keep the ImagePreviewRow struct)
+
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()

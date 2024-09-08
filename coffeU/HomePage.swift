@@ -14,11 +14,11 @@ struct HomePage: View {
         NavigationView {
             ZStack {
                 // Background Image
-                Image("coffee-background") // Make sure to add this image to your asset catalog
+                Image("coffee-background")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
-                    .overlay(Color.black.opacity(0.3)) // Darken the image for better contrast
+                    .overlay(Color.black.opacity(0.3))
                 
                 VStack(spacing: 30) {
                     Text("Coffee U")
@@ -47,12 +47,7 @@ struct HomePage: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        showingProfile = true
-                    }) {
-                        Image(systemName: "person.crop.circle")
-                            .foregroundColor(.white)
-                    }
+                    ProfileIcon(action: { showingProfile = true })
                 }
             }
         }

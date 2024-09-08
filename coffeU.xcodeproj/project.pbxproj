@@ -25,6 +25,7 @@
 		FC86742A2C8E29360054F67A /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8674292C8E29360054F67A /* HomePage.swift */; };
 		FC86742C2C8E29500054F67A /* RecommendedPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86742B2C8E29500054F67A /* RecommendedPostsView.swift */; };
 		FC86742E2C8E29670054F67A /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86742D2C8E29670054F67A /* ShopView.swift */; };
+		FC8674302C8E307A0054F67A /* ProfileIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86742F2C8E307A0054F67A /* ProfileIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		FC8674292C8E29360054F67A /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		FC86742B2C8E29500054F67A /* RecommendedPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedPostsView.swift; sourceTree = "<group>"; };
 		FC86742D2C8E29670054F67A /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		FC86742F2C8E307A0054F67A /* ProfileIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				FC8674232C8D85120054F67A /* ProfileView.swift */,
 				FC86742B2C8E29500054F67A /* RecommendedPostsView.swift */,
 				FC8674292C8E29360054F67A /* HomePage.swift */,
+				FC86742F2C8E307A0054F67A /* ProfileIcon.swift */,
 				FC8674212C8D810C0054F67A /* PostDetailView.swift */,
 				FC86742D2C8E29670054F67A /* ShopView.swift */,
 				FC8674252C8D88120054F67A /* Post.swift */,
@@ -320,6 +323,7 @@
 				FC86742A2C8E29360054F67A /* HomePage.swift in Sources */,
 				FC86742E2C8E29670054F67A /* ShopView.swift in Sources */,
 				FC8674222C8D810C0054F67A /* PostDetailView.swift in Sources */,
+				FC8674302C8E307A0054F67A /* ProfileIcon.swift in Sources */,
 				FC8674262C8D88120054F67A /* Post.swift in Sources */,
 				FC35FE692C8AA2B700C5D398 /* coffeUApp.swift in Sources */,
 				FC3CC1012C8AB98E00F04630 /* AuthView.swift in Sources */,
